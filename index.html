@@ -1,1 +1,20 @@
-<h1>Hello World</h1>
+<body>
+    <h1>3秒后跳转到BBS论坛</h1>
+    <div>
+      您也可以选择现在跳转: 
+
+      <button onclick="func()">跳转</button>
+    </div>
+</body>
+<script>
+    var interval = 0
+
+    function func() {
+      window.location.href=""
+      if (interval !== 0) {
+        clearInterval(interval)
+      }
+    }
+
+    var interval = setInterval("clock()",3000);
+</script>
