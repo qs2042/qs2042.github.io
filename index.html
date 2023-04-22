@@ -1,9 +1,24 @@
-<body>
-    <h1><span id="num">null</span>秒后跳转到BBS论坛</h1>
-    <div>
-      您也可以选择现在跳转: 
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感谢GitHub</title>
+    <style>
+        .d-flex {display: flex}
+        .bg-wheat {background-color: wheat}
+        .bg-white {background-color: white}
+    </style>
+</head>
+<body class="d-flex bg-wheat" style="justify-content: center; align-items: center;flex-direction: column;min-height: 100vh;">
+    <div class="bg-white" style="border-radius: 10px; padding: 20px 40px">
+        <h1><span id="num">null</span>秒后跳转到BBS论坛</h1>
+        <div>
+        您也可以选择现在跳转: 
 
-      <button onclick="func()">跳转</button>
+        <button onclick="func()">跳转</button>
+        </div>
     </div>
 </body>
 <script>
@@ -13,14 +28,16 @@
     num.innerHTML = seconds
 
     function func() {
-      if (seconds <= 0) {
+      console.log("seconds: ", seconds)
+      if (seconds == 0) {
         clearInterval(interval)
-        window.location.href="http://106.52.46.241/bbs/#/"
+        window.location.href="http://106.52.46.241/bbs/#"
+      } else {
+        seconds -= 1
+        num.innerHTML = seconds
       }
-      
-      num -= 1
-      num.innerHTML = seconds
     }
 
     interval = setInterval("func()",1000);
 </script>
+</html>
