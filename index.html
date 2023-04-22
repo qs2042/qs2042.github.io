@@ -1,5 +1,5 @@
 <body>
-    <h1><span id="num"></span>秒后跳转到BBS论坛</h1>
+    <h1><span id="num">null</span>秒后跳转到BBS论坛</h1>
     <div>
       您也可以选择现在跳转: 
 
@@ -9,7 +9,7 @@
 <script>
     let interval = 0
     let seconds = 3
-    let num = document.getElementById("#num")
+    let num = document.getElementById("num")
     num.innerHTML = seconds
 
     function func() {
