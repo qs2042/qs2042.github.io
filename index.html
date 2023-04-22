@@ -13,7 +13,7 @@
     num.innerHTML = seconds
 
     function func() {
-      if (seconds >= 0) {
+      if (seconds <= 0) {
         clearInterval(interval)
         window.location.href="http://106.52.46.241/bbs/#/"
       }
